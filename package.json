@@ -1,0 +1,22 @@
+{
+  "name": "pbg",
+  "version": "1.0.0",
+  "description": "handle those process with just one command (pbg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently 'npm:start-*' && clear",
+    "load": "concurrently 'npm:load-*'",
+    "start-server": "cd ./backdoor && npm run dev",
+    "start-ui": "cd ./ui && npm run dev",
+    "load-server": "cd ./backdoor && npm install",
+    "load-ui": "cd ./ui && npm install"
+  },
+  "keywords": [
+    "pbg"
+  ],
+  "author": "somtodev",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
