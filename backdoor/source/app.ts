@@ -4,7 +4,7 @@ import cors from "cors";
 import router from "./routes";
 import errorHandler from "./utils/error_handler";
 import path from "path";
-import { getPort } from "./utils";
+import { getPort } from "./utils/index";
 import logger, { logging } from "./utils/logger";
 import { openUrl } from "./utils/open";
 
@@ -19,8 +19,7 @@ app.use(logger);
 
 app.use("/api", router);
 app.use("*", (req: Request, res: Response) => {
-  const file = path.join(__dirname, "public", "index.html");
-  console.log(file);
+  const file = path.join(__dirname, "source/public", "index.html");
   res.sendFile(file);
 });
 

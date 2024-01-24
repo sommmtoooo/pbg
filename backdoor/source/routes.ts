@@ -1,8 +1,7 @@
-import { Router, Request, Response } from "express";
+import { Router } from "express";
 import { deleteProcess, findProcess, getAllProcess } from "./handler/process";
-import path from "path";
 
-const app: Router = new Router();
+const app = Router();
 
 // Process Routes
 app.get("/process/all", getAllProcess);
