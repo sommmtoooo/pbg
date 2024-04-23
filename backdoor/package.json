@@ -2,7 +2,7 @@
   "name": "pbg",
   "version": "1.0.0",
   "main": "source/app.ts",
-  "type": "module",
+  "type": "NodeNext",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only source/app.ts",
     "roll": "rollup -c",
